@@ -1,0 +1,37 @@
+include		GENERIC
+ident		DX64
+
+nooptions	INET6
+nooptions	SCTP
+
+nodevice	fdc
+nodevice	cbb
+nodevice	pccard
+nodevice	cardbus
+nodevice	cs
+nodevice	ed
+nodevice	ex
+nodevice	ep
+nodevice	fe
+nodevice	sn
+nodevice	xe
+
+nodevice	sound
+nodevice	snd_cmi
+nodevice	snd_csa
+nodevice	snd_emu10kx
+nodevice	snd_es137x
+nodevice	snd_hda
+nodevice	snd_ich
+nodevice	snd_uaudio
+nodevice	snd_via8233
+
+# netif polling
+options		DEVICE_POLLING
+options		HZ=1000
+
+# console options
+options		SC_DISABLE_REBOOT
+
+# AMD temperature sensor support
+device		amdtemp
