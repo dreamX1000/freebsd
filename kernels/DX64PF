@@ -1,0 +1,48 @@
+include		GENERIC
+ident		DX64PF
+
+nooptions	INET6
+nooptions	SCTP
+
+nodevice	fdc
+nodevice	cbb
+nodevice	pccard
+nodevice	cardbus
+nodevice	cs
+nodevice	ed
+nodevice	ex
+nodevice	ep
+nodevice	fe
+nodevice	sn
+nodevice	xe
+
+nodevice	sound
+nodevice	snd_cmi
+nodevice	snd_csa
+nodevice	snd_emu10kx
+nodevice	snd_es137x
+nodevice	snd_hda
+nodevice	snd_ich
+nodevice	snd_uaudio
+nodevice	snd_via8233
+
+# netif polling
+options		DEVICE_POLLING
+options		HZ=1000
+
+# console options
+options		SC_DISABLE_REBOOT
+
+# pf support with ALTQ
+device		pf
+device		pflog
+options		ALTQ
+options		ALTQ_PRIQ
+options		ALTQ_CDNR
+options		ALTQ_HFSC
+options		ALTQ_RIO
+options		ALTQ_RED
+options		ALTQ_CBQ
+
+# AMD temperature sensor support
+device		amdtemp
