@@ -1,20 +1,10 @@
 include		GENERIC
-ident		DX64
-
-nooptions	INET6
-nooptions	SCTP
+ident		SSG5029
 
 nodevice	fdc
 nodevice	cbb
 nodevice	pccard
 nodevice	cardbus
-nodevice	cs
-nodevice	ed
-nodevice	ex
-nodevice	ep
-nodevice	fe
-nodevice	sn
-nodevice	xe
 
 nodevice	sound
 nodevice	snd_cmi
@@ -23,8 +13,28 @@ nodevice	snd_emu10kx
 nodevice	snd_es137x
 nodevice	snd_hda
 nodevice	snd_ich
-nodevice	snd_uaudio
 nodevice	snd_via8233
+
+# IPMI support
+device		ipmi
+
+# CPU thermals
+device		coretemp
+
+# devices
+device		ioat
+device		acpi_wmi
+
+device		smbus
+device		ichsmb
+
+device		pci
+device		pchtherm
+device		hidbus
+device		hid
+device		uhid
+device		usb
+device		ums
 
 # netif polling
 options		DEVICE_POLLING
@@ -32,6 +42,3 @@ options		HZ=1000
 
 # console options
 options		SC_DISABLE_REBOOT
-
-# AMD temperature sensor support
-device		amdtemp

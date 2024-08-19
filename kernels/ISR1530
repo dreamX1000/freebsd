@@ -1,0 +1,30 @@
+include		GENERIC
+ident		ISR1530
+
+nodevice	fdc
+nodevice	cbb
+nodevice	pccard
+nodevice	cardbus
+
+nodevice	sound
+nodevice	snd_cmi
+nodevice	snd_csa
+nodevice	snd_emu10kx
+nodevice	snd_es137x
+nodevice	snd_hda
+nodevice	snd_ich
+nodevice	snd_via8233
+
+# CPU thermals
+device		coretemp
+
+# SMBus support
+device		smbus
+device		ichsmb
+
+# hardware crypto support
+device		crypto
+device		cryptodev
+
+# console options
+options		SC_DISABLE_REBOOT

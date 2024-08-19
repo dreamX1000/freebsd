@@ -1,0 +1,40 @@
+include		GENERIC
+ident		SYS5019
+
+nodevice	fdc
+nodevice	cbb
+nodevice	pccard
+nodevice	cardbus
+
+nodevice	sound
+nodevice	snd_cmi
+nodevice	snd_csa
+nodevice	snd_emu10kx
+nodevice	snd_es137x
+nodevice	snd_hda
+nodevice	snd_ich
+nodevice	snd_via8233
+
+# usb devices
+device		ums
+device		uhci
+device		ohci
+device		usb
+device		uhid
+
+# IPMI support
+device		ipmi
+
+# Platform thermals
+device		coretemp
+device		pchtherm
+
+# Intel SMBus
+device		pci
+device		smbus
+device		smb
+device		ichsmb
+
+
+# console options
+options		SC_DISABLE_REBOOT

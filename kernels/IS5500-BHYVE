@@ -1,0 +1,54 @@
+include		GENERIC
+ident		IS5500-BHYVE
+
+# no inet6
+nooptions	INET6
+nooptions	SCTP
+
+# no "old" hardware support
+nodevice	fdc
+nodevice	cbb
+nodevice	pccard
+nodevice	cardbus
+
+# no sound support
+nodevice	sound
+nodevice	snd_cmi
+nodevice	snd_csa
+nodevice	snd_emu10kx
+nodevice	snd_es137x
+nodevice	snd_hda
+nodevice	snd_ich
+nodevice	snd_via8233
+
+# CPU thermals
+device		coretemp
+
+# SMBus support
+device		smbus
+device		ichsmb
+
+# hardware crypto support
+device		crypto
+device		cryptodev
+
+# Intel I/O acceleration
+device		ioat
+
+# USB-HID support
+device		uhid
+device		hid
+device		usb
+device		uhci
+device		ohci
+device		ums
+device		wmt
+device		evdev
+
+# null-modem, tap, bridge
+device		nmdm
+device		tuntap
+device		bridge
+
+# console options
+options		SC_DISABLE_REBOOT
