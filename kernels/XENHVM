@@ -1,0 +1,33 @@
+include		GENERIC
+ident		XENHVM
+
+options		NO_ADAPTIVE_MUTEXES
+options		NO_ADAPTIVE_RWLOCKS
+options		NO_ADAPTIVE_SX
+
+nodevice	fdc
+nodevice	cbb
+nodevice	pccard
+nodevice	cs
+nodevice	ed
+nodevice	ex
+nodevice	ep
+nodevice	fe
+nodevice	sn
+nodevice	xe
+
+# XEN guest support
+options		XENHVM
+device		xenpci
+device		smbus
+device		intpm
+
+# USB hid
+device		usb
+device		uhci
+device		ohci
+device		uhid
+device		hid
+device		hidbus
+device		wmt
+device		ums
